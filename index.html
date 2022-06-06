@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vartotojai</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+    <div class="container mt-1">
+        <nav>
+          <a
+            class="btn btn-primary"
+            data-bs-toggle="collapse"
+            href="#addUsers"
+            role="button"
+            aria-expanded="false"
+            aria-controls="addUsers"
+          >
+            Pridėti naują vartotoją
+          </a>
+          <a
+            class="btn btn-primary"
+            data-bs-toggle="collapse"
+            href="#searchUsers"
+            role="button"
+            aria-expanded="false"
+            aria-controls="searchUsers"
+          >
+            Ieškoti vartotojų
+          </a>
+          <a class="btn btn-primary" onClick="sortBy('surname')">Rūšiuoti pagal pavardę</a>
+          <a class="btn btn-primary" onClick="sortBy('name')">Rūšiuoti pagal vardą</a>
+        </nav>
+        <div id="addUsers" class="collapse">
+          <form>
+            <div class="mb-3">
+              <label for="vardas" class="form-label">Vardas</label>
+              <input type="text" name="vardas" id="vardas" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label for="pavarde" class="form-label">Pavardė</label>
+              <input
+                type="text"
+                name="pavarde"
+                id="pavarde"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="miestas" class="form-label">Miestas</label>
+              <input
+                type="text"
+                name="miestas"
+                id="miestas"
+                class="form-control"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Įvesti</button>
+          </form>
+        </div>
+        <div id="searchUsers" class="collapse">
+          <form>
+            <div class="mb-3">
+              <label for="paieska" class="form-label"
+                >Įveskite vardą arba pavardę</label
+              >
+              <input
+                type="text"
+                name="paieska"
+                id="paieska"
+                class="form-control"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Ieškoti</button>
+          </form>
+          <div id="searchResults"></div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Vardas</th>
+              <th scope="col">Pavardė</th>
+              <th scope="col">Miestas</th>
+              <th scope="col">Įvedimo data</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    <script type="module" src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

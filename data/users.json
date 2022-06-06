@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "name": "Samanta",
+      "surname": "Vynuogaitė",
+      "city": "Kaunas",
+      "added": "2022 05 13"
+    },
+    {
+      "id": 2,
+      "name": "Jurga",
+      "surname": "Vyšnaitė",
+      "city": "Kaišiadorys",
+      "added": "2021 07 23"
+    },
+    {
+      "id": 3,
+      "name": "Jaunius",
+      "surname": "Kopūstaitis",
+      "city": "Vilnius",
+      "added": "2020 09 12"
+    },
+    {
+      "id": 4,
+      "name": "Tautvydas",
+      "surname": "Samanaitis",
+      "city": "Kaunas",
+      "added": "2022 01 13"
+    },
+    {
+      "id": 5,
+      "name": "Gediminas",
+      "surname": "Sparnaitis",
+      "city": "Biržai",
+      "added": "2021 05 13"
+    }
+  ]
