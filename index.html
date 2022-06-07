@@ -35,8 +35,8 @@
           >
             Ieškoti vartotojų
           </a>
-          <a class="btn btn-primary" onClick="sortBy('surname')">Rūšiuoti pagal pavardę</a>
-          <a class="btn btn-primary" onClick="sortBy('name')">Rūšiuoti pagal vardą</a>
+          <a id="sortBySurname" class="btn btn-primary">Rūšiuoti pagal pavardę</a>
+          <a id="sortByName" class="btn btn-primary">Rūšiuoti pagal vardą</a>
         </nav>
         <div id="addUsers" class="collapse">
           <form>
@@ -54,11 +54,11 @@
               />
             </div>
             <div class="mb-3">
-              <label for="miestas" class="form-label">Miestas</label>
+              <label for="valstybe" class="form-label">Valstybė</label>
               <input
                 type="text"
-                name="miestas"
-                id="miestas"
+                name="valstybe"
+                id="valstybe"
                 class="form-control"
               />
             </div>
@@ -88,11 +88,12 @@
               <th scope="col">ID</th>
               <th scope="col">Vardas</th>
               <th scope="col">Pavardė</th>
-              <th scope="col">Miestas</th>
+              <th scope="col">Valstybė</th>
               <th scope="col">Įvedimo data</th>
             </tr>
           </thead>
           <tbody></tbody>
+          <tfoot></tfoot>
         </table>
       </div>
     <script type="module" src="main.js"></script>
