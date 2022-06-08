@@ -1,18 +1,22 @@
 'use strict';
 
+//HTTP requestų metodai: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+//HTTP headeriai: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+
+
 // const usersData = '../data/users.json';
 const usersData = 'https://furtive-resisted-toque.glitch.me/users';
 
-export const getUsers = async () =>
-  await fetch(usersData).then((response) => {
+export const getUsers = () =>
+  fetch(usersData).then((response) => {
     if (!response.ok) {
       throw new Error('Įvyko klaida: ' + response.status);
     }
     return response.json();
   });
 
-export const addUser = async (data) =>
-  await fetch(usersData, {
+export const addUser = (data) =>
+  fetch(usersData, {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
@@ -26,7 +30,7 @@ export const addUser = async (data) =>
     return response.json();
   });
 
-// export const getUsers = async () => {
+// export const getUsers = () => {
 //     return await fetch(usersData).then((response) => {
 //         if(!response.ok) {
 //             throw new Error('Įvyko klaida: ' + response.status)
